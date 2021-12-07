@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>rent list</title>
+    </head>
+    <body>
+        
+        <div>
+            <table id="ring" border="1" style="width: 50% ;" >
+                <thead>
+                    <tr>
+                        <h1>DETAILS OF HOUSE</h1>
+                    </tr>
+                    <tr>
+                        <th>NAME</th><th>HOUSE NAME</th><th>HOUSE NO</th><th>RENT</th>
+                    </tr>
+                </thead>
+                    {% for i in rent %}
+                    <tr>
+                        <td>{{i.name}}</td><td>{{i.house_name}}</td><td>{{i.house_no}}</td><td>{{i.rent}}</td>
+                    </tr>
+                    {% endfor %}
+            </table>
+            <a href="{% url 'index' %}" class="rose">Add house</a>
+        </div>
+    </body>
+</html>
